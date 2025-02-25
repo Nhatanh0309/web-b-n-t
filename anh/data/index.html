@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Moto</title>
+        <link rel="stylesheet" href="asset/style.css">
+        <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="navbar">
+            <a href="#default" id="logo">MOTORUSH <i class="fa fa-motorcycle logo-icon"></i></a>
+            <div id="navbar-right">
+                <a href="#">
+                    <div class="search-container">
+                        <form action="/action_page.php">
+                            <input type="text" placeholder="Search.." name="search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </a>
+                <a href="#home">Home</a>
+                <a href="#contact" onclick="openSearch()">Danh Mục</a>
+                <a href="#about">USER</a>
+
+            </div>
+            <script>
+                // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font sizehttp://127.0.0.1:5500/#home
+                window.onscroll = function () { scrollFunction() };
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                        document.getElementById("navbar").style.padding = "30px 10px";
+                        document.getElementById("logo").style.fontSize = "25px";
+                    } else {
+                        document.getElementById("navbar").style.padding = "80px 10px";
+                        document.getElementById("logo").style.fontSize = "35px";
+                    }
+                }
+            </script>
+        </div>
+        
+        <div style="margin-top:210px;padding:15px 15px 2500px;">
+            <div class="slideshow-container">
+            
+                <div class="mySlides fade">
+                    <img src="/data/slide/sl1.png" style="width:100%">
+                </div>
+            
+                <div class="mySlides fade">
+                    <img src="/data/slide/sl2.png" style="width:100%">
+                </div>
+            
+                <div class="mySlides fade">
+                    <img src="/data/slide/sl3.png" style="width:100%">
+                </div>
+            
+            </div>
+            <script>
+                var slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) { slideIndex = 1 };
+                    slides[slideIndex - 1].style.display = "block";
+                    setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+            </script>
+        </div>
+        <!-- danh mục  -->
+        <div id="mySidenav" class="sidenav">
+            <a href="#" id="about"><img src="/data/icon/ic1.svg" alt="Xe Ga" width="38px"></a>
+            <a href="#" id="blog"><img src="/data/icon/ic2.svg" alt="Xe Số" width="38px"></a>
+            <a href="#" id="projects"><img src="/data/icon/ic3.svg" alt="MoTo" width="38px"></a>
+            <a href="#" id="contact"><img src="/data/icon/ic4.svg" alt="Đạp Điện" width="38px"></a>
+        </div>
+        <!-- list  -->
+        <div id="myOverlay" class="overlay">
+            <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+            <div class="overlay-content">
+                <div class="navbar">
+                    <div class="dropdown">
+                        <button class="dropbtn">Hãng Xe
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Hon Da</a>
+                            <a href="#">okokok</a>
+                            <a href="#">okokok</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Loại Xe
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">PKL</a>
+                            <a href="#">okokok</a>
+                            <a href="#">okokok</a>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        <script>
+            function openSearch() {
+                document.getElementById("myOverlay").style.display = "block";
+            }
+
+            function closeSearch() {
+                document.getElementById("myOverlay").style.display = "none";
+            }
+        </script>
+        <!-- footer  -->
+        <footer class="footer-distributed">
+        
+            <div class="footer-left">
+        
+                <h3>MOTO<span>RUSH</span></h3>
+        
+                <p class="footer-links">
+                    <a href="#" class="link-1">Trang Chủ</a>
+        
+                    <a href="#">Blog</a>
+        
+                    <a href="#">Xe PKL</a>
+        
+                    <a href="#">XE HonDa</a>
+        
+                    <a href="#">FAQ</a>
+
+                </p>
+        
+                <p class="footer-company-name">Copyright ©2021-Lê Thu Thảo</p>
+            </div>
+        
+            <div class="footer-center">
+        
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>Số 99999</span> Giải Phóng, Hà Nội</p>
+                </div>
+        
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>099999999</p>
+                </div>
+        
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:aaaaa@gmail.com">aaaa@gmail.com</a></p>
+                </div>
+        
+            </div>
+        
+            <div class="footer-right">
+        
+                <p class="footer-company-about">
+                    <span>Giới Thiệu</span>
+                    Bài Tập Lê Thu Thảo - Trang Web bán phương tiện giao thông biết thêm liên hệ
+                </p>
+        
+                <div class="footer-icons">
+        
+                    <a href="#"><i class="fab fa-facebook-f"></i></i></a>
+                    <a href="#"><i class="fab fa-skype"></i></i></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></i></a>
+                    <a href="#"><i class="fab fa-google-plus"></i></i></i></a>
+        
+                </div>
+        
+            </div>
+        
+        </footer>
+    </body>
+</html>
